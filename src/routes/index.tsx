@@ -14,12 +14,12 @@ import { toast } from "sonner";
 
 import aecImage from "@/assets/aec-new.jpg";
 import albionshireImage from "@/assets/albionshire-new.webp";
-import caseBranding from "@/assets/branding-case-cover.jpg.asset.json";
+import caseBranding from "@/assets/case-branding.jpg";
 import caseDashboardGreen from "@/assets/sales-dashboard-green.jpg.asset.json";
 import caseDashboardPurple from "@/assets/sales-dashboard-purple.jpg.asset.json";
-import caseDuolingo from "@/assets/duolingo-case-cover.jpg.asset.json";
-import caseSoulRoutes from "@/assets/soul-routes-case-cover.jpg.asset.json";
-import caseStreaming from "@/assets/disney-hotstar-case-cover.jpg.asset.json";
+import caseDuolingo from "@/assets/case-duolingo.jpg";
+import caseSoulRoutes from "@/assets/case-soul-routes.jpg";
+import caseStreaming from "@/assets/case-streaming.jpg";
 import chilternImage from "@/assets/chiltern-new.jpg";
 import caseKincare from "@/assets/kincare-case-cover.jpg.asset.json";
 import jeyancieImage from "@/assets/jeyancie-new.jpg";
@@ -108,7 +108,7 @@ const caseStudies = [
     type: "UX Audit · Product Analysis",
     description: "A focused review of Duolingo’s learning experience, usability patterns, and opportunities for improvement.",
     href: "https://www.behance.net/gallery/211873157/Duolingo-UX-audit",
-    image: caseDuolingo.url,
+    image: caseDuolingo,
     tone: "bg-sky-soft text-ink",
   },
   {
@@ -117,7 +117,7 @@ const caseStudies = [
     type: "UX Case Study · Streaming",
     description: "An end-to-end case study exploring a clearer and more engaging entertainment experience.",
     href: "https://www.behance.net/gallery/212924887/UX-Case-study-of-Disney-Hotstar",
-    image: caseStreaming.url,
+    image: caseStreaming,
     tone: "bg-ink text-paper",
   },
   {
@@ -153,7 +153,7 @@ const caseStudies = [
     type: "Branding · Visual Design",
     description: "A visual identity exploration connecting a distinctive brand voice with a cohesive design language.",
     href: "https://www.behance.net/gallery/215777899/Branding",
-    image: caseBranding.url,
+    image: caseBranding,
     tone: "bg-ink text-paper",
   },
   {
@@ -162,7 +162,7 @@ const caseStudies = [
     type: "Luxury Travel · Web Design",
     description: "A refined travel website balancing immersive destinations with a calm, premium booking journey.",
     href: "https://www.behance.net/gallery/254268279/Soul-Routes-Luxury-Travel-Website",
-    image: caseSoulRoutes.url,
+    image: caseSoulRoutes,
     tone: "bg-paper text-ink",
   },
 ];
