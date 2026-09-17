@@ -14,17 +14,17 @@ import { toast } from "sonner";
 
 import aecImage from "@/assets/aec-new.jpg";
 import albionshireImage from "@/assets/albionshire-new.webp";
-import caseBranding from "@/assets/case-branding.jpg";
-import caseDashboardGreen from "@/assets/sales-dashboard-green.jpg.asset.json";
-import caseDashboardPurple from "@/assets/sales-dashboard-purple.jpg.asset.json";
-import caseDuolingo from "@/assets/case-duolingo.jpg";
-import caseSoulRoutes from "@/assets/case-soul-routes.jpg";
-import caseStreaming from "@/assets/case-streaming.jpg";
+import caseBranding from "@/assets/branding-case-cover.jpg";
+import caseDashboardGreen from "@/assets/sales-dashboard-green.jpg";
+import caseDashboardPurple from "@/assets/sales-dashboard-purple.jpg";
+import caseDuolingo from "@/assets/duolingo-case-cover.jpg";
+import caseSoulRoutes from "@/assets/soul-routes-case-cover.jpg";
+import caseStreaming from "@/assets/disney-hotstar-case-cover.jpg";
 import chilternImage from "@/assets/chiltern-new.jpg";
-import caseKincare from "@/assets/kincare-case-cover.jpg.asset.json";
+import caseKincare from "@/assets/kincare-case-cover.jpg";
 import jeyancieImage from "@/assets/jeyancie-new.jpg";
 import reddynaturalsImage from "@/assets/reddynaturals-new.jpg";
-import salinaPortrait from "@/assets/salina-portrait.png.asset.json";
+import salinaPortrait from "@/assets/salina-portrait.png";
 import urbanshireImage from "@/assets/urbanshire-new.webp";
 import { Button } from "@/components/ui/button";
 
@@ -126,7 +126,7 @@ const caseStudies = [
     type: "Product Design · Data",
     description: "A sales dashboard designed to make business performance easier to scan, understand, and act on.",
     href: "https://www.behance.net/gallery/212499425/Dashboard-Sales-case-study",
-    image: caseDashboardGreen.url,
+    image: caseDashboardGreen,
     tone: "bg-paper text-ink",
   },
   {
@@ -135,7 +135,7 @@ const caseStudies = [
     type: "Dashboard Design · Analytics",
     description: "A distinct analytics dashboard that organizes complex business insights into a focused visual workspace.",
     href: "https://www.behance.net/gallery/212499425/Dashboard-Sales-case-study",
-    image: caseDashboardPurple.url,
+    image: caseDashboardPurple,
     tone: "bg-ink text-paper",
   },
   {
@@ -144,7 +144,7 @@ const caseStudies = [
     type: "UX Case Study · Family Care",
     description: "A thoughtful digital care experience shaped around families, everyday support, and peace of mind.",
     href: "https://www.behance.net/gallery/213930253/Kincare-family-care",
-    image: caseKincare.url,
+    image: caseKincare,
     tone: "bg-sky-soft text-ink",
   },
   {
@@ -239,7 +239,7 @@ function Portfolio() {
 
           <div className="pointer-events-none z-10 mt-4 flex justify-center md:absolute md:inset-x-0 md:bottom-0 md:mt-0">
             <img
-              src={salinaPortrait.url}
+              src={salinaPortrait}
               alt="Salina Siddiqui, UI/UX designer"
               width={768}
               height={768}
