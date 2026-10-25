@@ -25,6 +25,7 @@ import caseKincare from "@/assets/kincare-case-cover.jpg";
 import jeyancieImage from "@/assets/jeyancie-new.jpg";
 import reddynaturalsImage from "@/assets/reddynaturals-new.jpg";
 import salinaPortrait from "@/assets/salina-portrait.png";
+import thepetraitImage from "@/assets/thepetrait-new.jpg";
 import urbanshireImage from "@/assets/urbanshire-new.webp";
 import { Button } from "@/components/ui/button";
 
@@ -49,7 +50,16 @@ export const Route = createFileRoute("/")({
   component: Portfolio,
 });
 
-const projects = [
+interface Project {
+  number: string;
+  title: string;
+  type: string;
+  description: string;
+  image: string;
+  href?: string;
+}
+
+const projects: Project[] = [
   {
     number: "01",
     title: "JEYANCIE Beauty",
@@ -66,27 +76,35 @@ const projects = [
   },
   {
     number: "03",
+    title: "The Petrait",
+    type: "Pets · E-commerce",
+    description: "A pet-themed e-commerce website for personalized accessories, phone cases, and wall art.",
+    image: thepetraitImage,
+    href: "https://thepetrait.com/",
+  },
+  {
+    number: "04",
     title: "AEC Consultant",
     type: "Education · Consultancy",
     description: "UK university admissions and education guidance platform for prospective students.",
     image: aecImage,
   },
   {
-    number: "04",
+    number: "05",
     title: "Albion Shire",
     type: "Property · Real estate",
     description: "A professional property and real estate website experience built around clear discovery.",
     image: albionshireImage,
   },
   {
-    number: "05",
+    number: "06",
     title: "Urbanshine Cleaner",
     type: "Services · Cleaning",
     description: "A clear, trustworthy digital home for a professional cleaning service.",
     image: urbanshireImage,
   },
   {
-    number: "06",
+    number: "07",
     title: "Reddy Naturals",
     type: "Wellness · E-commerce",
     description: "Plant-based wellness e-commerce experience focused on clarity and conversion.",
@@ -300,22 +318,54 @@ function Portfolio() {
              <p className="text-sm font-medium text-muted-foreground">Client work</p>
             <h2 className="mt-4 text-5xl font-semibold md:text-7xl">Selected <span className="font-display text-6xl font-normal text-sky-deep md:text-8xl">projects</span></h2>
           </div>
-           <span className="hidden text-sm text-muted-foreground sm:block">01—06</span>
+           <span className="hidden text-sm text-muted-foreground sm:block">01—{String(projects.length).padStart(2, "0")}</span>
         </div>
 
         <div className="space-y-24 pt-20 md:space-y-36 md:pt-28">
           {projects.map((project, index) => (
             <article key={project.title} className="group grid gap-9 md:grid-cols-12 md:items-center md:gap-14">
               <div className={`overflow-hidden rounded-3xl bg-canvas-alt shadow-portfolio md:col-span-7 ${index % 2 ? "md:order-2" : ""}`}>
-                <img src={project.image} alt={`${project.title} website interface design`} width={1600} height={1000} loading="lazy" className="aspect-[8/5] w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.02]" />
+                {project.href ? (
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block overflow-hidden"
+                    aria-label={`View ${project.title} live website`}
+                  >
+                    <img
+                      src={project.image}
+                      alt={`${project.title} website interface design`}
+                      width={1600}
+                      height={1000}
+                      loading="lazy"
+                      className="aspect-[8/5] w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                    />
+                  </a>
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={`${project.title} website interface design`}
+                    width={1600}
+                    height={1000}
+                    loading="lazy"
+                    className="aspect-[8/5] w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                  />
+                )}
               </div>
               <div className="md:col-span-5">
-                 <span className="text-sm font-semibold text-sky-deep">{project.number} / 06</span>
+                 <span className="text-sm font-semibold text-sky-deep">{project.number} / {String(projects.length).padStart(2, "0")}</span>
                  <p className="mt-4 text-sm text-muted-foreground">{project.type}</p>
                 <h3 className="mt-4 text-3xl font-semibold md:text-5xl">{project.title}</h3>
                 <p className="mt-5 max-w-md leading-relaxed text-muted-foreground">{project.description}</p>
                  <Button asChild variant="portfolio" className="mt-8 h-12 px-6 text-sm">
-                  <a href="#contact">View live project <ArrowUpRight /></a>
+                  <a
+                    href={project.href || "#contact"}
+                    target={project.href ? "_blank" : undefined}
+                    rel={project.href ? "noreferrer" : undefined}
+                  >
+                    View live project <ArrowUpRight />
+                  </a>
                 </Button>
               </div>
             </article>
