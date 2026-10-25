@@ -22,11 +22,13 @@ import caseSoulRoutes from "@/assets/soul-routes-case-cover.jpg";
 import caseStreaming from "@/assets/disney-hotstar-case-cover.jpg";
 import chilternImage from "@/assets/chiltern-new.jpg";
 import caseKincare from "@/assets/kincare-case-cover.jpg";
+import evPowerImage from "@/assets/ev-power-new.jpg";
 import jeyancieImage from "@/assets/jeyancie-new.jpg";
 import reddynaturalsImage from "@/assets/reddynaturals-new.jpg";
 import salinaPortrait from "@/assets/salina-portrait.png";
 import thepetraitImage from "@/assets/thepetrait-new.jpg";
 import urbanshireImage from "@/assets/urbanshire-new.webp";
+import zaynahImage from "@/assets/zaynah-new.jpg";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
@@ -66,13 +68,14 @@ const projects: Project[] = [
     type: "Beauty · E-commerce",
     description: "Premium skincare e-commerce experience built around calm product storytelling.",
     image: jeyancieImage,
+    href: "https://jeyanciebeauty.com/products/natural-night-serum-impeccable-skin-night-serum",
   },
   {
     number: "02",
-    title: "Chiltern Global",
-    type: "Defence · Equipment platform",
-    description: "Specialist defence and police equipment platform with a dense, dependable catalogue.",
-    image: chilternImage,
+    title: "EV Power",
+    type: "Clean Energy · Mobile App",
+    description: "Smart electric vehicle charging and route navigation mobile app providing real-time station availability and battery telemetry.",
+    image: evPowerImage,
   },
   {
     number: "03",
@@ -84,27 +87,44 @@ const projects: Project[] = [
   },
   {
     number: "04",
+    title: "Chiltern Global",
+    type: "Defence · Equipment platform",
+    description: "Specialist defence and police equipment platform with a dense, dependable catalogue.",
+    image: chilternImage,
+    href: "https://chilternglobal.com/",
+  },
+  {
+    number: "05",
+    title: "ZAYNAH",
+    type: "Fashion · E-commerce",
+    description: "A timeless modest fashion e-commerce storefront presenting abayas, hijabs, and curated collection campaigns.",
+    image: zaynahImage,
+    href: "https://zaynah.co.uk/",
+  },
+  {
+    number: "06",
     title: "AEC Consultant",
     type: "Education · Consultancy",
     description: "UK university admissions and education guidance platform for prospective students.",
     image: aecImage,
+    href: "https://aecconsultant.co.uk/",
   },
   {
-    number: "05",
+    number: "07",
     title: "Albion Shire",
     type: "Property · Real estate",
     description: "A professional property and real estate website experience built around clear discovery.",
     image: albionshireImage,
   },
   {
-    number: "06",
+    number: "08",
     title: "Urbanshine Cleaner",
     type: "Services · Cleaning",
     description: "A clear, trustworthy digital home for a professional cleaning service.",
     image: urbanshireImage,
   },
   {
-    number: "07",
+    number: "09",
     title: "Reddy Naturals",
     type: "Wellness · E-commerce",
     description: "Plant-based wellness e-commerce experience focused on clarity and conversion.",
