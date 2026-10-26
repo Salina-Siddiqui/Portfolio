@@ -194,6 +194,7 @@ const caseStudies = [
     href: "https://www.behance.net/gallery/212924887/UX-Case-study-of-Disney-Hotstar",
     image: caseStreaming,
     tone: "bg-ink text-paper",
+    imageBg: "bg-[#014753]",
   },
   {
     number: "06",
@@ -433,7 +434,7 @@ function Portfolio() {
                   href={study.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="group relative m-3 block min-h-[280px] overflow-hidden rounded-[1.4rem] md:m-4 md:min-h-0"
+                  className={`group relative m-3 block min-h-[280px] overflow-hidden rounded-[1.4rem] md:m-4 md:min-h-0 ${study.imageBg || ""}`}
                   aria-label={`View ${study.title} case study on Behance`}
                 >
                   <img src={study.image} alt={`${study.title} case study cover`} width={1400} height={900} loading="lazy" className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.02]" />
