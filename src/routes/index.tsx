@@ -429,9 +429,15 @@ function Portfolio() {
                     </a>
                   </div>
                 </div>
-                <div className="group relative m-3 min-h-[280px] overflow-hidden rounded-[1.4rem] md:m-4 md:min-h-0">
+                <a
+                  href={study.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group relative m-3 block min-h-[280px] overflow-hidden rounded-[1.4rem] md:m-4 md:min-h-0"
+                  aria-label={`View ${study.title} case study on Behance`}
+                >
                   <img src={study.image} alt={`${study.title} case study cover`} width={1400} height={900} loading="lazy" className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.02]" />
-                </div>
+                </a>
               </div>
             </article>
           ))}
