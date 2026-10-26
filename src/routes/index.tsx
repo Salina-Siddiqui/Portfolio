@@ -124,6 +124,7 @@ const projects: Project[] = [
     type: "Property · Real estate",
     description: "A professional property and real estate website experience built around clear discovery.",
     image: albionshireImage,
+    href: "https://albionshire.co.uk/",
   },
   {
     number: "09",
