@@ -14,6 +14,7 @@ import { toast } from "sonner";
 
 import aecImage from "@/assets/aec-new.jpg";
 import albionshireImage from "@/assets/albionshire-new.webp";
+import blackmontutoringImage from "@/assets/blackmontutoring-new.jpg";
 import caseBranding from "@/assets/branding-case-cover.jpg";
 import caseDashboardGreen from "@/assets/sales-dashboard-green.jpg";
 import caseDashboardPurple from "@/assets/sales-dashboard-purple.jpg";
@@ -79,6 +80,14 @@ const projects: Project[] = [
   },
   {
     number: "03",
+    title: "Blackmon Tutoring",
+    type: "Education · Tutoring Platform",
+    description: "Personalized K-12 tutoring and test prep platform built around custom study plans, vetted instructors, and measurable student progress.",
+    image: blackmontutoringImage,
+    href: "https://www.blackmontutoring.com/",
+  },
+  {
+    number: "04",
     title: "The Petrait",
     type: "Pets · E-commerce",
     description: "A pet-themed e-commerce website for personalized accessories, phone cases, and wall art.",
@@ -86,7 +95,7 @@ const projects: Project[] = [
     href: "https://thepetrait.com/",
   },
   {
-    number: "04",
+    number: "05",
     title: "Chiltern Global",
     type: "Defence · Equipment platform",
     description: "Specialist defence and police equipment platform with a dense, dependable catalogue.",
@@ -94,7 +103,7 @@ const projects: Project[] = [
     href: "https://chilternglobal.com/",
   },
   {
-    number: "05",
+    number: "06",
     title: "ZAYNAH",
     type: "Fashion · E-commerce",
     description: "A timeless modest fashion e-commerce storefront presenting abayas, hijabs, and curated collection campaigns.",
@@ -102,7 +111,7 @@ const projects: Project[] = [
     href: "https://zaynah.co.uk/",
   },
   {
-    number: "06",
+    number: "07",
     title: "AEC Consultant",
     type: "Education · Consultancy",
     description: "UK university admissions and education guidance platform for prospective students.",
@@ -110,21 +119,21 @@ const projects: Project[] = [
     href: "https://aecconsultant.co.uk/",
   },
   {
-    number: "07",
+    number: "08",
     title: "Albion Shire",
     type: "Property · Real estate",
     description: "A professional property and real estate website experience built around clear discovery.",
     image: albionshireImage,
   },
   {
-    number: "08",
+    number: "09",
     title: "Urbanshine Cleaner",
     type: "Services · Cleaning",
     description: "A clear, trustworthy digital home for a professional cleaning service.",
     image: urbanshireImage,
   },
   {
-    number: "09",
+    number: "10",
     title: "Reddy Naturals",
     type: "Wellness · E-commerce",
     description: "Plant-based wellness e-commerce experience focused on clarity and conversion.",
@@ -438,7 +447,7 @@ function Portfolio() {
             <p className="text-xl leading-relaxed text-ink/70 md:text-2xl">I&apos;m Salina Siddiqui, a UI/UX designer with two years of experience delivering thoughtful websites and digital products across varied industries.</p>
             <div className="mt-12 grid grid-cols-3 gap-4 border-t border-ink/20 pt-8">
                <div><strong className="text-3xl font-semibold">2+</strong><p className="mt-2 text-sm text-ink/55">Years</p></div>
-               <div><strong className="text-3xl font-semibold">6</strong><p className="mt-2 text-sm text-ink/55">Projects</p></div>
+               <div><strong className="text-3xl font-semibold">10</strong><p className="mt-2 text-sm text-ink/55">Projects</p></div>
                <div><strong className="text-3xl font-semibold">07</strong><p className="mt-2 text-sm text-ink/55">Studies</p></div>
             </div>
           </div>
