@@ -17,12 +17,12 @@ import albionshireImage from "@/assets/albionshire-new.webp";
 import blackmontutoringImage from "@/assets/blackmontutoring-new.jpg";
 import caseBranding from "@/assets/branding-case-cover.jpg";
 import caseDashboardGreen from "@/assets/sales-dashboard-green.jpg";
-import caseDashboardPurple from "@/assets/sales-dashboard-purple.jpg";
 import caseDuolingo from "@/assets/duolingo-case-cover.jpg";
+import caseKincare from "@/assets/kincare-case-cover.png";
+import caseMednova from "@/assets/mednova-dashboard.jpg";
 import caseSoulRoutes from "@/assets/soul-routes-case-cover.jpg";
 import caseStreaming from "@/assets/disney-hotstar-case-cover.jpg";
 import chilternImage from "@/assets/chiltern-new.jpg";
-import caseKincare from "@/assets/kincare-case-cover.jpg";
 import evPowerImage from "@/assets/ev-power-new.jpg";
 import jeyancieImage from "@/assets/jeyancie-new.jpg";
 import reddynaturalsImage from "@/assets/reddynaturals-new.jpg";
@@ -77,6 +77,7 @@ const projects: Project[] = [
     type: "Clean Energy · Mobile App",
     description: "Smart electric vehicle charging and route navigation mobile app providing real-time station availability and battery telemetry.",
     image: evPowerImage,
+    href: "https://www.behance.net/gallery/257765579/EV-Charging-App-UIUX-Case-Study-Powering-Your-Ride",
   },
   {
     number: "03",
@@ -201,8 +202,8 @@ const caseStudies = [
     title: "Mednova Dashboard",
     type: "Healthtech · Clinic Management",
     description: "A smart healthcare management dashboard designed to streamline patient appointments, doctor availability, and clinic telemetry.",
-    href: "https://www.behance.net/gallery/212499425/Dashboard-Sales-case-study",
-    image: caseDashboardPurple,
+    href: "https://www.behance.net/gallery/257818327/Mednova-Healthcare-Appointment-Management-Dashboard",
+    image: caseMednova,
     tone: "bg-paper text-ink",
   },
   {
@@ -362,7 +363,11 @@ function Portfolio() {
                     target="_blank"
                     rel="noreferrer"
                     className="block overflow-hidden"
-                    aria-label={`View ${project.title} live website`}
+                    aria-label={
+                      project.href.includes("behance.net")
+                        ? `View ${project.title} case study on Behance`
+                        : `View ${project.title} live website`
+                    }
                   >
                     <img
                       src={project.image}
@@ -395,7 +400,7 @@ function Portfolio() {
                     target={project.href ? "_blank" : undefined}
                     rel={project.href ? "noreferrer" : undefined}
                   >
-                    View live project <ArrowUpRight />
+                    {project.href?.includes("behance.net") ? "View case study" : "View live project"} <ArrowUpRight />
                   </a>
                 </Button>
               </div>
