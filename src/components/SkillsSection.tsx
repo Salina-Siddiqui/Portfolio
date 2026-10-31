@@ -181,37 +181,38 @@ const tools: ToolItem[] = [
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="relative scroll-mt-28 py-20 sm:py-28 px-6 md:px-10 overflow-hidden">
-      {/* Ambient background light */}
-      <div className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 size-[500px] rounded-full bg-purple-500/[0.07] dark:bg-purple-500/[0.12] blur-[140px] -z-10" />
+    <section id="skills" className="relative scroll-mt-28 py-24 sm:py-32 px-6 md:px-10 overflow-hidden">
+      {/* Subtle brand ambient lighting */}
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[650px] rounded-full bg-sky/[0.08] blur-[160px] -z-10" />
 
       <div className="mx-auto max-w-7xl">
-        {/* Section Header matching user image */}
+        {/* Section Header matching site typography and color theme */}
         <div className="text-center">
-          <div className="inline-flex items-center justify-center gap-3">
+          <p className="text-sm font-medium text-muted-foreground">Tools &amp; technologies</p>
+          <div className="mt-4 inline-flex items-center justify-center gap-3">
             <span className="text-4xl sm:text-5xl select-none" role="img" aria-label="Robot icon">
               🤖
             </span>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 dark:from-purple-400 dark:via-violet-400 dark:to-indigo-300 bg-clip-text text-transparent">
-              My Skills
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-foreground">
+              My <span className="font-display text-5xl sm:text-7xl md:text-8xl font-normal text-sky-deep">skills</span>
             </h2>
           </div>
-          <p className="mt-4 text-center text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-5 text-center text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Here are some tools, methods, and technologies that I use to create modern and user-friendly digital experiences.
           </p>
         </div>
 
-        {/* 14 Tools Grid */}
-        <div className="mt-12 sm:mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-3.5 sm:gap-4 md:gap-5">
+        {/* 14 Tools Grid styled to match portfolio color theme */}
+        <div className="mt-14 sm:mt-18 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-3.5 sm:gap-4 md:gap-5">
           {tools.map((tool) => (
             <div
               key={tool.name}
-              className="group flex items-center gap-3.5 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white/70 dark:bg-zinc-900/60 p-3.5 sm:p-4 shadow-[0_2px_12px_rgba(0,0,0,0.03)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-purple-500/40 hover:shadow-[0_10px_25px_-5px_rgba(124,58,237,0.12)]"
+              className="group flex items-center gap-3.5 rounded-2xl border border-border/80 bg-canvas-alt dark:bg-card p-3.5 sm:p-4 shadow-portfolio backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-deep/50 hover:shadow-portfolio"
             >
               <div className="shrink-0 transition-transform duration-300 group-hover:scale-105">
                 {tool.icon}
               </div>
-              <span className="text-sm sm:text-[15px] font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 leading-tight">
+              <span className="text-sm sm:text-[15px] font-semibold tracking-tight text-foreground leading-tight">
                 {tool.name}
               </span>
             </div>

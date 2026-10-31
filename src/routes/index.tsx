@@ -301,7 +301,7 @@ function Portfolio() {
         <div className="skills-track flex w-max items-center gap-8">
           {[...skills, ...skills].map((skill, index) => (
             <div key={`${skill}-${index}`} className="flex items-center gap-8" aria-hidden={index >= skills.length}>
-               <span className="whitespace-nowrap text-sm font-semibold">{skill}</span>
+              <span className="whitespace-nowrap text-sm font-semibold">{skill}</span>
               <span className="size-2 rounded-full bg-sky" />
             </div>
           ))}
@@ -314,10 +314,10 @@ function Portfolio() {
       <section id="work" className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-36 scroll-mt-24">
         <div className="flex items-end justify-between border-b border-border pb-7">
           <div>
-             <p className="text-sm font-medium text-muted-foreground">Client work</p>
+            <p className="text-sm font-medium text-muted-foreground">Client work</p>
             <h2 className="mt-4 text-5xl font-semibold md:text-7xl">Selected <span className="font-display text-6xl font-normal text-sky-deep md:text-8xl">projects</span></h2>
           </div>
-           <span className="hidden text-sm text-muted-foreground sm:block">01—{String(projects.length).padStart(2, "0")}</span>
+          <span className="hidden text-sm text-muted-foreground sm:block">01—{String(projects.length).padStart(2, "0")}</span>
         </div>
 
         <div className="space-y-24 pt-20 md:space-y-36 md:pt-28">
@@ -357,11 +357,11 @@ function Portfolio() {
                 )}
               </div>
               <div className="md:col-span-5">
-                 <span className="text-sm font-semibold text-sky-deep">{project.number} / {String(projects.length).padStart(2, "0")}</span>
-                 <p className="mt-4 text-sm text-muted-foreground">{project.type}</p>
+                <span className="text-sm font-semibold text-sky-deep">{project.number} / {String(projects.length).padStart(2, "0")}</span>
+                <p className="mt-4 text-sm text-muted-foreground">{project.type}</p>
                 <h3 className="mt-4 text-3xl font-semibold md:text-5xl">{project.title}</h3>
                 <p className="mt-5 max-w-md leading-relaxed text-muted-foreground">{project.description}</p>
-                 <Button asChild variant="portfolio" className="mt-8 h-12 px-6 text-sm">
+                <Button asChild variant="portfolio" className="mt-8 h-12 px-6 text-sm">
                   <a
                     href={project.href || "#contact"}
                     target={project.href ? "_blank" : undefined}
@@ -379,25 +379,25 @@ function Portfolio() {
       <section id="case-studies" className="bg-ink px-4 py-24 text-paper md:px-8 md:py-36 scroll-mt-24">
         <div className="mx-auto mb-16 flex max-w-7xl flex-col gap-8 md:mb-24 md:flex-row md:items-end md:justify-between">
           <div>
-             <p className="text-sm font-medium text-paper/60">Research &amp; process</p>
+            <p className="text-sm font-medium text-paper/60">Research &amp; process</p>
             <h2 className="mt-5 text-5xl font-semibold md:text-7xl">Selected <span className="font-display text-6xl font-normal text-sky md:text-8xl">case studies</span></h2>
           </div>
-           <a href="#case-study-01" className="inline-flex min-h-11 items-center gap-3 text-sm font-semibold text-paper/70">Explore the studies <ArrowDown className="size-4" /></a>
+          <a href="#case-study-01" className="inline-flex min-h-11 items-center gap-3 text-sm font-semibold text-paper/70">Explore the studies <ArrowDown className="size-4" /></a>
         </div>
 
         <div className="mx-auto max-w-7xl space-y-8 md:space-y-12">
           {caseStudies.map((study) => (
             <article id={`case-study-${study.number}`} key={study.title} className={`case-card overflow-hidden rounded-[2rem] border border-paper/15 shadow-portfolio ${study.tone}`}>
               <div className="grid md:min-h-[580px] md:grid-cols-[0.9fr_1.1fr]">
-                 <div className="relative flex flex-col justify-center p-7 text-center md:p-12 lg:p-16">
-                   <div className="absolute left-7 right-7 top-7 flex items-center justify-between text-sm font-medium opacity-65 md:left-12 md:right-12 md:top-12 lg:left-16 lg:right-16 lg:top-16">
+                <div className="relative flex flex-col justify-center p-7 text-center md:p-12 lg:p-16">
+                  <div className="absolute left-7 right-7 top-7 flex items-center justify-between text-sm font-medium opacity-65 md:left-12 md:right-12 md:top-12 lg:left-16 lg:right-16 lg:top-16">
                     <span>Case study</span><span>{study.number} / 07</span>
                   </div>
-                   <div className="mx-auto mt-20 max-w-xl md:mt-0">
-                     <p className="text-sm font-medium opacity-65">{study.type}</p>
+                  <div className="mx-auto mt-20 max-w-xl md:mt-0">
+                    <p className="text-sm font-medium opacity-65">{study.type}</p>
                     <h3 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">{study.title}</h3>
                     <p className="mt-5 max-w-lg leading-relaxed opacity-70">{study.description}</p>
-                     <a href={study.href} target="_blank" rel="noreferrer" className="mt-8 inline-flex min-h-11 items-center gap-3 border-b border-current text-sm font-semibold" aria-label={`View ${study.title} case study on Behance`}>
+                    <a href={study.href} target="_blank" rel="noreferrer" className="mt-8 inline-flex min-h-11 items-center gap-3 border-b border-current text-sm font-semibold" aria-label={`View ${study.title} case study on Behance`}>
                       View on Behance <ArrowUpRight className="size-4" />
                     </a>
                   </div>
@@ -420,15 +420,15 @@ function Portfolio() {
       <section id="about" className="bg-sky-soft scroll-mt-24">
         <div className="mx-auto grid max-w-7xl gap-14 px-6 py-24 md:grid-cols-2 md:px-10 md:py-36">
           <div>
-             <p className="text-sm font-medium text-ink/55">About me</p>
+            <p className="text-sm font-medium text-ink/55">About me</p>
             <h2 className="mt-5 text-5xl font-semibold leading-tight md:text-7xl">Curious by <span className="font-display text-6xl font-normal text-sky-deep md:text-8xl">nature.</span></h2>
           </div>
           <div>
             <p className="text-xl leading-relaxed text-ink/70 md:text-2xl">I&apos;m Salina Siddiqui, a UI/UX designer with two years of experience delivering thoughtful websites and digital products across varied industries.</p>
             <div className="mt-12 grid grid-cols-3 gap-4 border-t border-ink/20 pt-8">
-               <div><strong className="text-3xl font-semibold">2+</strong><p className="mt-2 text-sm text-ink/55">Years</p></div>
-               <div><strong className="text-3xl font-semibold">10</strong><p className="mt-2 text-sm text-ink/55">Projects</p></div>
-               <div><strong className="text-3xl font-semibold">07</strong><p className="mt-2 text-sm text-ink/55">Studies</p></div>
+              <div><strong className="text-3xl font-semibold">2+</strong><p className="mt-2 text-sm text-ink/55">Years</p></div>
+              <div><strong className="text-3xl font-semibold">10</strong><p className="mt-2 text-sm text-ink/55">Projects</p></div>
+              <div><strong className="text-3xl font-semibold">07</strong><p className="mt-2 text-sm text-ink/55">Studies</p></div>
             </div>
           </div>
         </div>
@@ -437,7 +437,7 @@ function Portfolio() {
 
 
       <section id="services" className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-36 scroll-mt-24">
-         <p className="text-sm font-medium text-muted-foreground">Ways I can help</p>
+        <p className="text-sm font-medium text-muted-foreground">Ways I can help</p>
         <div className="mt-10 border-t border-border">
           {services.map((service, index) => (
             <div key={service} className="group flex min-h-24 items-center justify-between border-b border-border py-6">

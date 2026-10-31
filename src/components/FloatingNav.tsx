@@ -104,13 +104,13 @@ export function FloatingNav() {
                 onClick={(e) => handleNavClick(e, item.href, item.sectionId)}
                 className={`text-sm tracking-tight transition-colors duration-200 relative ${
                   isActive
-                    ? "font-semibold text-purple-600 dark:text-purple-400"
+                    ? "font-semibold text-sky-deep dark:text-sky"
                     : "font-medium text-foreground/75 hover:text-foreground"
                 }`}
               >
                 {item.label}
                 {isActive && (
-                  <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 size-1 rounded-full bg-purple-600 dark:bg-purple-400" />
+                  <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 size-1 rounded-full bg-sky-deep dark:bg-sky" />
                 )}
               </a>
             );
@@ -180,7 +180,7 @@ export function FloatingNav() {
                     onClick={(e) => handleNavClick(e, item.href, item.sectionId)}
                     className={`flex items-center px-3.5 py-2.5 rounded-xl text-sm font-medium transition-colors ${
                       isActive
-                        ? "bg-purple-500/10 text-purple-600 dark:text-purple-400 font-semibold"
+                        ? "bg-sky/15 text-sky-deep dark:text-sky font-semibold"
                         : "text-foreground/80 hover:bg-accent hover:text-foreground"
                     }`}
                   >
