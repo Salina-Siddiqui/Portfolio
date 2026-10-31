@@ -6,8 +6,6 @@ import {
   ArrowUpRight,
   Check,
   Copy,
-  Menu,
-  X,
 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -31,6 +29,10 @@ import thepetraitImage from "@/assets/thepetrait-new.jpg";
 import urbanshireImage from "@/assets/urbanshire-new.webp";
 import zaynahImage from "@/assets/zaynah-new.jpg";
 import { Button } from "@/components/ui/button";
+import { FloatingNav } from "@/components/FloatingNav";
+import { SkillsSection } from "@/components/SkillsSection";
+import { ExperienceSection } from "@/components/ExperienceSection";
+import { CertificatesSection } from "@/components/CertificatesSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -143,12 +145,7 @@ const projects: Project[] = [
   },
 ];
 
-const navItems = [
-  ["Work", "#work"],
-  ["Case Studies", "#case-studies"],
-  ["About", "#about"],
-  ["Contact", "#contact"],
-];
+
 
 const caseStudies = [
   {
@@ -227,7 +224,6 @@ const skills = ["Figma", "Canva", "Wireframing", "Prototyping", "User Research",
 const services = ["Product strategy", "UX research & testing", "Interface design", "Design systems"];
 
 function Portfolio() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   const handleCopyEmail = async () => {
@@ -246,42 +242,12 @@ function Portfolio() {
 
   return (
     <main className="bg-background text-foreground">
-      <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
-        <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 md:px-10">
-          <a href="#top" className="font-display text-3xl leading-none" aria-label="Salina Siddiqui, home">
-            Salina.
-          </a>
-          <div className="hidden items-center gap-9 text-sm font-medium text-muted-foreground md:flex">
-            {navItems.map(([label, href]) => (
-              <a key={label} href={href} className="transition-colors hover:text-foreground">{label}</a>
-            ))}
-          </div>
-          <Button asChild variant="portfolio" className="hidden h-11 px-6 text-sm md:inline-flex">
-            <a href="mailto:salinasiddiqui5@gmail.com">Let&apos;s talk <ArrowUpRight /></a>
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setMenuOpen((open) => !open)}
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={menuOpen}
-          >
-            {menuOpen ? <X /> : <Menu />}
-          </Button>
-        </nav>
-        {menuOpen && (
-          <div className="border-t border-border bg-background px-6 py-4 md:hidden">
-            {navItems.map(([label, href]) => (
-              <a key={label} href={href} onClick={() => setMenuOpen(false)} className="block py-3 text-lg">{label}</a>
-            ))}
-          </div>
-        )}
-      </header>
+      {/* Floating Pill Navigation */}
+      <FloatingNav />
 
-      <section id="top" className="hero-editorial relative overflow-hidden text-ink">
+      <section id="top" className="hero-editorial relative overflow-hidden text-ink scroll-mt-20">
         <div className="hero-sweep pointer-events-none absolute inset-x-0 bottom-0 h-[60%]" />
-        <div className="relative mx-auto flex max-w-[1500px] flex-col px-4 pb-8 pt-8 md:min-h-[820px] md:px-8 md:pb-12 md:pt-14">
+        <div className="relative mx-auto flex max-w-[1500px] flex-col px-4 pb-8 pt-24 md:min-h-[860px] md:px-8 md:pb-12 md:pt-28">
           <h1 className="hero-name-row relative z-20 flex w-full items-baseline justify-center gap-[0.1em] font-semibold">
             <span className="hero-outline">SALINA</span>
             <span className="text-ink">SIDDIQUI</span>
@@ -344,7 +310,10 @@ function Portfolio() {
         </div>
       </section>
 
-      <section id="work" className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-36">
+      {/* 🤖 My Skills Section */}
+      <SkillsSection />
+
+      <section id="work" className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-36 scroll-mt-24">
         <div className="flex items-end justify-between border-b border-border pb-7">
           <div>
              <p className="text-sm font-medium text-muted-foreground">Client work</p>
@@ -409,7 +378,7 @@ function Portfolio() {
         </div>
       </section>
 
-      <section id="case-studies" className="bg-ink px-4 py-24 text-paper md:px-8 md:py-36">
+      <section id="case-studies" className="bg-ink px-4 py-24 text-paper md:px-8 md:py-36 scroll-mt-24">
         <div className="mx-auto mb-16 flex max-w-7xl flex-col gap-8 md:mb-24 md:flex-row md:items-end md:justify-between">
           <div>
              <p className="text-sm font-medium text-paper/60">Research &amp; process</p>
@@ -450,7 +419,7 @@ function Portfolio() {
         </div>
       </section>
 
-      <section id="about" className="bg-sky-soft">
+      <section id="about" className="bg-sky-soft scroll-mt-24">
         <div className="mx-auto grid max-w-7xl gap-14 px-6 py-24 md:grid-cols-2 md:px-10 md:py-36">
           <div>
              <p className="text-sm font-medium text-ink/55">About me</p>
@@ -467,7 +436,13 @@ function Portfolio() {
         </div>
       </section>
 
-      <section id="services" className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-36">
+      {/* Experience & Career Milestones */}
+      <ExperienceSection />
+
+      {/* Certificates & Credentials */}
+      <CertificatesSection />
+
+      <section id="services" className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-36 scroll-mt-24">
          <p className="text-sm font-medium text-muted-foreground">Ways I can help</p>
         <div className="mt-10 border-t border-border">
           {services.map((service, index) => (
@@ -479,7 +454,7 @@ function Portfolio() {
         </div>
       </section>
 
-      <footer id="contact" className="relative overflow-hidden bg-ink text-paper py-28 md:py-40">
+      <footer id="contact" className="relative overflow-hidden bg-ink text-paper py-28 md:py-40 scroll-mt-24">
         {/* Subtle ambient lighting */}
         <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[600px] rounded-full bg-sky/[0.08] blur-[160px]" />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:24px_24px] opacity-40" />
