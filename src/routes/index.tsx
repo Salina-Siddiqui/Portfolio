@@ -19,7 +19,7 @@ import caseDuolingo from "@/assets/duolingo-case-cover.jpg";
 import caseKincare from "@/assets/kincare-case-cover.png";
 import caseMednova from "@/assets/mednova-dashboard.jpg";
 import caseSoulRoutes from "@/assets/soul-routes-case-cover.jpg";
-import caseStreaming from "@/assets/disney-hotstar-case-cover.jpg";
+import caseNoirChronograph from "@/assets/noir-chronograph-case-cover.jpg";
 import chilternImage from "@/assets/chiltern-new.jpg";
 import evPowerImage from "@/assets/ev-power-new.jpg";
 import jeyancieImage from "@/assets/jeyancie-new.jpg";
@@ -184,13 +184,13 @@ const caseStudies = [
   },
   {
     number: "05",
-    title: "Disney+ Hotstar",
-    type: "UX Case Study · Streaming",
-    description: "An end-to-end case study exploring a clearer and more engaging entertainment experience.",
-    href: "https://www.behance.net/gallery/212924887/UX-Case-study-of-Disney-Hotstar",
-    image: caseStreaming,
+    title: "Noir Chronograph",
+    type: "Luxury Marketplace · Mobile App",
+    description: "A refined luxury auction and timepiece mobile experience balancing live bidding telemetry with immersive collector storytelling.",
+    href: "https://www.behance.net/salinasiddiqui",
+    image: caseNoirChronograph,
     tone: "bg-ink text-paper",
-    imageBg: "bg-[#014753]",
+    imageBg: "bg-[#F7F8FA]",
   },
   {
     number: "06",
