@@ -203,16 +203,16 @@ export function SkillsSection() {
         </div>
 
         {/* 14 Tools Grid styled to match portfolio color theme */}
-        <div className="mt-14 sm:mt-18 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-3.5 sm:gap-4 md:gap-5">
+        <div className="mt-12 sm:mt-16 grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-3.5 sm:gap-4 max-w-6xl mx-auto">
           {tools.map((tool) => (
             <div
               key={tool.name}
-              className="group flex items-center gap-3.5 rounded-2xl border border-border/80 bg-canvas-alt dark:bg-card p-3.5 sm:p-4 shadow-portfolio backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-deep/50 hover:shadow-portfolio"
+              className="group flex min-h-[72px] items-center gap-3.5 rounded-2xl border border-border/80 bg-card p-3.5 sm:p-4 shadow-portfolio backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md hover:border-border-strong"
             >
               <div className="shrink-0 transition-transform duration-300 group-hover:scale-105">
                 {tool.icon}
               </div>
-              <span className="text-sm sm:text-[15px] font-semibold tracking-tight text-foreground leading-tight">
+              <span className="text-sm sm:text-[15px] font-semibold tracking-tight text-foreground leading-snug">
                 {tool.name}
               </span>
             </div>

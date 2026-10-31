@@ -191,6 +191,7 @@ const caseStudies = [
     image: caseNoirChronograph,
     tone: "bg-ink text-paper",
     imageBg: "bg-[#F7F8FA]",
+    imageFit: "contain",
   },
   {
     number: "06",
@@ -409,7 +410,14 @@ function Portfolio() {
                   className={`group relative m-3 block min-h-[280px] overflow-hidden rounded-[1.4rem] md:m-4 md:min-h-0 ${study.imageBg || ""}`}
                   aria-label={`View ${study.title} case study on Behance`}
                 >
-                  <img src={study.image} alt={`${study.title} case study cover`} width={1400} height={900} loading="lazy" className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.02]" />
+                  <img
+                    src={study.image}
+                    alt={`${study.title} case study cover`}
+                    width={1400}
+                    height={900}
+                    loading="lazy"
+                    className={`h-full w-full ${"imageFit" in study && study.imageFit === "contain" ? "object-contain p-3 sm:p-6" : "object-cover"} object-center transition-transform duration-700 group-hover:scale-[1.02]`}
+                  />
                 </a>
               </div>
             </article>
