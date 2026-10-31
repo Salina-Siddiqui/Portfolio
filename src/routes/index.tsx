@@ -31,7 +31,6 @@ import zaynahImage from "@/assets/zaynah-new.jpg";
 import { Button } from "@/components/ui/button";
 import { FloatingNav } from "@/components/FloatingNav";
 import { SkillsSection } from "@/components/SkillsSection";
-import { ExperienceSection } from "@/components/ExperienceSection";
 import { CertificatesSection } from "@/components/CertificatesSection";
 
 export const Route = createFileRoute("/")({
@@ -435,9 +434,6 @@ function Portfolio() {
           </div>
         </div>
       </section>
-
-      {/* Experience & Career Milestones */}
-      <ExperienceSection />
 
       {/* Certificates & Credentials */}
       <CertificatesSection />
