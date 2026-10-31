@@ -31,7 +31,6 @@ import zaynahImage from "@/assets/zaynah-new.jpg";
 import { Button } from "@/components/ui/button";
 import { FloatingNav } from "@/components/FloatingNav";
 import { SkillsSection } from "@/components/SkillsSection";
-import { CertificatesSection } from "@/components/CertificatesSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -435,8 +434,7 @@ function Portfolio() {
         </div>
       </section>
 
-      {/* Certificates & Credentials */}
-      <CertificatesSection />
+
 
       <section id="services" className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-36 scroll-mt-24">
          <p className="text-sm font-medium text-muted-foreground">Ways I can help</p>
