@@ -190,7 +190,7 @@ const caseStudies = [
     href: "https://www.behance.net/salinasiddiqui",
     image: caseNoirChronograph,
     tone: "bg-ink text-paper",
-    imageBg: "bg-[#F7F8FA]",
+    imageBg: "bg-[#ECE8E1]",
     imageFit: "contain",
   },
   {
@@ -416,7 +416,7 @@ function Portfolio() {
                     width={1400}
                     height={900}
                     loading="lazy"
-                    className={`h-full w-full ${"imageFit" in study && study.imageFit === "contain" ? "object-contain p-3 sm:p-6" : "object-cover"} object-center transition-transform duration-700 group-hover:scale-[1.02]`}
+                    className={`h-full w-full ${"imageFit" in study && study.imageFit === "contain" ? "object-contain" : "object-cover"} object-center transition-transform duration-700 group-hover:scale-[1.02]`}
                   />
                 </a>
               </div>
