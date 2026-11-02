@@ -309,10 +309,10 @@ function Portfolio() {
         </div>
       </section>
 
-      {/* 🤖 My Skills Section */}
+      {/* My Skills Section */}
       <SkillsSection />
 
-      <section id="work" className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-36 scroll-mt-24">
+      <section id="work" className="mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pt-12 md:pt-16 md:pb-36 scroll-mt-24">
         <div className="flex items-end justify-between border-b border-border pb-7">
           <div>
             <p className="text-sm font-medium text-muted-foreground">Client work</p>
@@ -444,7 +444,7 @@ function Portfolio() {
 
 
 
-      <section id="services" className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-36 scroll-mt-24">
+      <section id="services" className="mx-auto max-w-7xl px-6 pt-16 pb-12 md:pt-28 md:pb-16 scroll-mt-24">
         <p className="text-sm font-medium text-muted-foreground">Ways I can help</p>
         <div className="mt-10 border-t border-border">
           {services.map((service, index) => (
@@ -456,7 +456,7 @@ function Portfolio() {
         </div>
       </section>
 
-      <footer id="contact" className="relative overflow-hidden bg-ink text-paper py-28 md:py-40 scroll-mt-24">
+      <footer id="contact" className="relative overflow-hidden bg-ink text-paper py-16 sm:py-20 md:py-24 scroll-mt-24">
         {/* Subtle ambient lighting */}
         <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[600px] rounded-full bg-sky/[0.08] blur-[160px]" />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:24px_24px] opacity-40" />
@@ -472,7 +472,7 @@ function Portfolio() {
           </div>
 
           {/* Core Headline */}
-          <h2 className="mt-8 tracking-tight">
+          <h2 className="mt-6 md:mt-8 tracking-tight">
             <span className="block text-[clamp(2rem,6.4vw,6.4rem)] font-semibold leading-tight whitespace-nowrap">
               Let&apos;s make something
             </span>
@@ -481,12 +481,12 @@ function Portfolio() {
             </span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-md text-base text-paper/65 md:text-lg">
+          <p className="mx-auto mt-4 max-w-md text-base text-paper/65 md:text-lg">
             Have a project or opportunity in mind? Let&apos;s connect.
           </p>
 
           {/* Interactive Email Bar */}
-          <div className="mt-10 inline-flex flex-col sm:flex-row items-center gap-3 rounded-2xl border border-paper/15 bg-paper/[0.04] p-2.5 backdrop-blur-xl transition-all hover:border-sky/40">
+          <div className="mt-8 md:mt-10 inline-flex flex-col sm:flex-row items-center gap-3 rounded-2xl border border-paper/15 bg-paper/[0.04] p-2.5 backdrop-blur-xl transition-all hover:border-sky/40">
             <a
               href="mailto:salinasiddiqui5@gmail.com"
               className="px-4 py-2 text-lg sm:text-2xl font-medium tracking-tight text-paper transition-colors hover:text-sky"
@@ -525,7 +525,7 @@ function Portfolio() {
           </div>
 
           {/* Social Links */}
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-paper/60">
+          <div className="mt-8 md:mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-paper/60">
             <a
               href="https://www.linkedin.com/in/salina-siddiqui-57a286324/"
               target="_blank"
@@ -546,7 +546,7 @@ function Portfolio() {
           </div>
 
           {/* Bottom Bar */}
-          <div className="mt-20 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-paper/10 pt-8 text-xs text-paper/45 md:mt-28">
+          <div className="mt-12 sm:mt-16 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-paper/10 pt-6 md:pt-7 text-xs text-paper/45">
             <p>© 2026 Salina Siddiqui · UI/UX Designer</p>
 
             <button

@@ -203,7 +203,7 @@ const tools: ToolItem[] = [
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="relative scroll-mt-28 py-24 sm:py-32 px-6 md:px-10 overflow-hidden">
+    <section id="skills" className="relative scroll-mt-28 pt-12 pb-10 sm:pt-16 sm:pb-12 md:pt-20 md:pb-16 px-6 md:px-10 overflow-hidden">
       {/* Subtle brand ambient lighting */}
       <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[650px] rounded-full bg-sky/[0.08] blur-[160px] -z-10" />
 
@@ -211,16 +211,16 @@ export function SkillsSection() {
         {/* Section Header matching site typography and color theme */}
         <div className="text-center">
           <p className="text-sm font-medium text-muted-foreground">Tools &amp; technologies</p>
-          <h2 className="mt-4 text-4xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-foreground">
+          <h2 className="mt-2.5 sm:mt-3 text-4xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-foreground">
             My <span className="font-display text-5xl sm:text-7xl md:text-8xl font-normal text-sky-deep">skills</span>
           </h2>
-          <p className="mt-5 text-center text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-3.5 sm:mt-4 text-center text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Here are some tools, methods, and technologies that I use to create modern and user-friendly digital experiences.
           </p>
         </div>
 
         {/* Tools Grid styled to match portfolio color theme */}
-        <div className="mt-12 sm:mt-16 grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-3.5 sm:gap-4 max-w-6xl mx-auto">
+        <div className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-3.5 sm:gap-4 max-w-6xl mx-auto">
           {tools.map((tool) => (
             <div
               key={tool.name}
