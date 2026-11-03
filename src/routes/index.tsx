@@ -20,6 +20,7 @@ import caseKincare from "@/assets/kincare-case-cover.png";
 import caseMednova from "@/assets/mednova-dashboard.jpg";
 import caseSoulRoutes from "@/assets/soul-routes-case-cover.jpg";
 import caseNoirChronograph from "@/assets/noir-chronograph-case-cover.jpg";
+import caseVera from "@/assets/case-vera.jpg";
 import chilternImage from "@/assets/chiltern-new.jpg";
 import evPowerImage from "@/assets/ev-power-new.jpg";
 import jeyancieImage from "@/assets/jeyancie-new.jpg";
@@ -148,42 +149,15 @@ const projects: Project[] = [
 const caseStudies = [
   {
     number: "01",
-    title: "Duolingo UX Audit",
-    type: "UX Audit · Product Analysis",
-    description: "A focused review of Duolingo’s learning experience, usability patterns, and opportunities for improvement.",
-    href: "https://www.behance.net/gallery/211873157/Duolingo-UX-audit",
-    image: caseDuolingo,
-    tone: "bg-sky-soft text-ink",
-  },
-  {
-    number: "02",
-    title: "Soul Routes",
-    type: "Luxury Travel · Web Design",
-    description: "A refined travel website balancing immersive destinations with a calm, premium booking journey.",
-    href: "https://www.behance.net/gallery/254268279/Soul-Routes-Luxury-Travel-Website",
-    image: caseSoulRoutes,
-    tone: "bg-ink text-paper",
-  },
-  {
-    number: "03",
-    title: "Sales Dashboard",
-    type: "Product Design · Data",
-    description: "A sales dashboard designed to make business performance easier to scan, understand, and act on.",
-    href: "https://www.behance.net/gallery/212499425/Dashboard-Sales-case-study",
-    image: caseDashboardGreen,
+    title: "Véra",
+    type: "Fashion & Editorial · Interactive Prototype",
+    description: "An immersive contemporary fashion experience combining bold typography, expressive silhouettes, and high-fidelity interactive prototyping.",
+    href: "https://www.behance.net/salinasiddiqui",
+    image: caseVera,
     tone: "bg-paper text-ink",
   },
   {
-    number: "04",
-    title: "Kincare",
-    type: "UX Case Study · Family Care",
-    description: "A thoughtful digital care experience shaped around families, everyday support, and peace of mind.",
-    href: "https://www.behance.net/gallery/213930253/Kincare-family-care",
-    image: caseKincare,
-    tone: "bg-sky-soft text-ink",
-  },
-  {
-    number: "05",
+    number: "02",
     title: "Noir Chronograph",
     type: "Luxury Marketplace · Mobile App",
     description: "A refined luxury auction and timepiece mobile experience balancing live bidding telemetry with immersive collector storytelling.",
@@ -194,7 +168,43 @@ const caseStudies = [
     imageFit: "contain",
   },
   {
+    number: "03",
+    title: "Duolingo UX Audit",
+    type: "UX Audit · Product Analysis",
+    description: "A focused review of Duolingo’s learning experience, usability patterns, and opportunities for improvement.",
+    href: "https://www.behance.net/gallery/211873157/Duolingo-UX-audit",
+    image: caseDuolingo,
+    tone: "bg-sky-soft text-ink",
+  },
+  {
+    number: "04",
+    title: "Soul Routes",
+    type: "Luxury Travel · Web Design",
+    description: "A refined travel website balancing immersive destinations with a calm, premium booking journey.",
+    href: "https://www.behance.net/gallery/254268279/Soul-Routes-Luxury-Travel-Website",
+    image: caseSoulRoutes,
+    tone: "bg-ink text-paper",
+  },
+  {
+    number: "05",
+    title: "Sales Dashboard",
+    type: "Product Design · Data",
+    description: "A sales dashboard designed to make business performance easier to scan, understand, and act on.",
+    href: "https://www.behance.net/gallery/212499425/Dashboard-Sales-case-study",
+    image: caseDashboardGreen,
+    tone: "bg-paper text-ink",
+  },
+  {
     number: "06",
+    title: "Kincare",
+    type: "UX Case Study · Family Care",
+    description: "A thoughtful digital care experience shaped around families, everyday support, and peace of mind.",
+    href: "https://www.behance.net/gallery/213930253/Kincare-family-care",
+    image: caseKincare,
+    tone: "bg-sky-soft text-ink",
+  },
+  {
+    number: "07",
     title: "Mednova Dashboard",
     type: "Healthtech · Clinic Management",
     description: "A smart healthcare management dashboard designed to streamline patient appointments, doctor availability, and clinic telemetry.",
@@ -203,7 +213,7 @@ const caseStudies = [
     tone: "bg-paper text-ink",
   },
   {
-    number: "07",
+    number: "08",
     title: "Fruiticle Brand Identity",
     type: "Branding · Visual Identity",
     description: "A playful and vibrant brand identity and packaging design for Fruiticle ice-cream bars, blending custom typography with joyful visual storytelling.",
@@ -392,7 +402,7 @@ function Portfolio() {
               <div className="grid md:min-h-[580px] md:grid-cols-[0.9fr_1.1fr]">
                 <div className="relative flex flex-col justify-center p-7 text-center md:p-12 lg:p-16">
                   <div className="absolute left-7 right-7 top-7 flex items-center justify-between text-sm font-medium opacity-65 md:left-12 md:right-12 md:top-12 lg:left-16 lg:right-16 lg:top-16">
-                    <span>Case study</span><span>{study.number} / 07</span>
+                    <span>Case study</span><span>{study.number} / {String(caseStudies.length).padStart(2, "0")}</span>
                   </div>
                   <div className="mx-auto mt-20 max-w-xl md:mt-0">
                     <p className="text-sm font-medium opacity-65">{study.type}</p>
@@ -436,7 +446,7 @@ function Portfolio() {
             <div className="mt-12 grid grid-cols-3 gap-4 border-t border-ink/20 pt-8">
               <div><strong className="text-3xl font-semibold">2+</strong><p className="mt-2 text-sm text-ink/55">Years</p></div>
               <div><strong className="text-3xl font-semibold">10</strong><p className="mt-2 text-sm text-ink/55">Projects</p></div>
-              <div><strong className="text-3xl font-semibold">07</strong><p className="mt-2 text-sm text-ink/55">Studies</p></div>
+              <div><strong className="text-3xl font-semibold">{String(caseStudies.length).padStart(2, "0")}</strong><p className="mt-2 text-sm text-ink/55">Studies</p></div>
             </div>
           </div>
         </div>
